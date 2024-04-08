@@ -1,5 +1,5 @@
 <template>
-    <Add/>
+    <NavBar/>
     <Contacts/>
 </template>
 
