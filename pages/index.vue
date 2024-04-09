@@ -1,6 +1,8 @@
 <template>
     <GenericButton/>
-    <ComboName/>
+    <GenericActions/>
+    <GenericContact/>
+    <GenericNameIcon/>
 </template>
 
 <script>
