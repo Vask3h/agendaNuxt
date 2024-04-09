@@ -1,6 +1,6 @@
 <template>
-    <NavBar/>
-    <Contacts/>
+    <GenericButton/>
+    <ComboName/>
 </template>
 
 <script>
