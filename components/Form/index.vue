@@ -26,30 +26,6 @@
     
 </template>
 <script>
-    export default{
-        name:"Contacts",
-        data: () => ({
-            contacts: [],
-            name: "",
-            surname: "",
-            phoneNum: 0,
-            email:"",
-        }),
-        methods: {
-            submit() {
-            
-                let id = Math.floor(Math.random() * 1000000000000);
-                this.contacts.push({
-                    name:this.name,
-                    surname:this.surname,
-                    phoneNum:this.phoneNum,
-                    email:this.email,   
-                    id: id
-                })
-                console.log(this.id);
-                console.log(this.contacts);
-            }
-        },
-        
-    }
+
+
 </script>
