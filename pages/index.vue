@@ -1,40 +1,20 @@
 <template>
-    <div class="dark:bg-gray-900">
-        <GenericInput 
-            textLabel="Nombre"
-            textPlaceholder="Inserte nombre"
-        />
-        <GenericInput 
-            textLabel="Apellido"
-            textPlaceholder="Inserte apellido"
-        /> 
-        <GenericInput 
-            textLabel="Telefono"
-            typeInput="number"
-            textPlaceholder="Inserte numero de telefono"
-        />
-         <GenericInput 
-            textLabel="Correo"
-            textPlaceholder="Inserte@correo"
-        />
-        
-    <GenericButton/>
-</div>
-    
-</template>
+    <div class="bg-gray-900 grid grid-cols-4 gap-4 justify-center text-center items-center text-white">
+        <div>
+            <GenericNameIcon/>
+        </div>
+        <div>
+            <p>Nombre:</p>
+        </div>
+        <div>
+            <p>Correo:</p>
+        </div>
+        <div>
+            acciones
+        </div>
+    </div>
+        <div class="flex flex-row-reverse items-end bg-black">
+            <button class="rounded-full text-white bg-gray-700 placeholder-gray border border-solid outline-none focus-within:border-blue-500 border-gray-600 p-2 pl-4 pr-4">+</button>
+        </div>
 
-<script>
-    export default{
-        data:() => ({
-            text:"Prueba"
-        }),
-        computed: {
-            onTextComputed(){
-                return "Pepito"
-            }
-        }
-        
-        
-    }
-    
-</script>
+</template>
