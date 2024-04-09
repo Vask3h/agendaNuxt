@@ -5,7 +5,7 @@
     </button>
 
     <button class="max-w-10"  >
-        <NuxtImg src="/trash-bin-trash-svgrepo-com.svg"/>
+        <NuxtImg src="/trash-can-svgrepo-com.svg"/>
     </button>
 </div>
 
