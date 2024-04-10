@@ -1,20 +1,35 @@
+
+import type { GenericContactName } from '#build/components';
+
+import { GenericActions } from '#build/components';
+
+import { GenericNameIcon } from '#build/components';
 <template>
-    <div class="bg-gray-900 grid grid-cols-4 gap-4 justify-center text-center items-center text-white">
-        <div>
-            <GenericNameIcon/>
+    
+        <div class="bg-gray-900 flex flex-row justify-between p-2 text-center items-center text-white text-xl rounded-[10px_10px_0_0]
+        max-w-7xl m-auto">
+            
+                <div> 
+                    <GenericNameIcon/>
+                </div>
+                <div>
+                    <p>Nombre:</p>
+                </div>
+                <div>
+                    <p>Telefono:</p>
+                </div>
+                <div>
+                    <p>Correo:</p>
+                </div>
+                <div>
+                    <p>Acciones:</p>
+                </div>
         </div>
-        <div>
-            <p>Nombre:</p>
-        </div>
-        <div>
-            <p>Correo:</p>
-        </div>
-        <div>
-            acciones
-        </div>
-    </div>
-        <div class="flex flex-row-reverse items-end bg-black">
-            <button class="rounded-full text-white bg-gray-700 placeholder-gray border border-solid outline-none focus-within:border-blue-500 border-gray-600 p-2 pl-4 pr-4">+</button>
-        </div>
+       <GenericContactName/>
+       <GenericContactName/>
+       <GenericContactName/>
+       <GenericContactName/>
+
+        
 
 </template>

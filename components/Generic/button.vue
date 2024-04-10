@@ -9,6 +9,6 @@
 
 <script> 
     export default{
-        name: "templateButton",
+        name: "templateButton",        
     }
 </script>
