@@ -29,7 +29,15 @@ import { GenericNameIcon } from '#build/components';
        <GenericContactName/>
        <GenericContactName/>
        <GenericContactName/>
-
+          <NuxtLink to="add-contact" class="add">
+            <div class="fixed top-3/4 right-4">
+                <button class="text-5xl h-20 w-20 rounded-full bg-gray-700 hover:bg-blue-500 text-white font-bold py-2 px-4 shadow-lg">
+                  +
+                </button>
+            </div>
+          </NuxtLink>
         
 
 </template>
+<script setup lang="ts">
+</script>
