@@ -6,15 +6,8 @@
     </div>
 </template>
 
-
 <script>
     export default{
-        name:"nameIcon",   
-        data: () =>({
-            
-        })
-    
-    
-    
+        name:"nameIcon",
     }
 </script>

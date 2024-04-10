@@ -1,19 +1,16 @@
 <template>
-<div class="flex justify-center ">
-    <button class="max-w-10" >
-        <NuxtImg src="/pencil.svg"/>
-        
+  <div class="flex justify-center ">
+    <button class="max-w-10 p-2 hover:bg-gray-700 rounded transition duration-100" >
+      <NuxtImg src="/edit.svg"/>
     </button>
-
-    <button class="max-w-10"  >
-        <NuxtImg src="/trash-can-svgrepo-com.svg"/>
-
+    <button class="max-w-10 p-2 hover:bg-gray-700 rounded transition duration-100"  >
+      <NuxtImg src="/trash.svg"/>
     </button>
-</div>
-
+  </div>
 </template>
+
 <script> 
-    export default{
-        name: "actions",
-    }
+  export default{
+      name: "actions",
+  }
 </script>
