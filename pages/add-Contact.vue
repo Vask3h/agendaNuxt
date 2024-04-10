@@ -13,7 +13,7 @@
         <GenericInput 
             textLabel="Telefono"
             typeInput="number"
-            textPlaceholder="Inserte numero de telefono"
+            textPlaceholder="Inserte Num de telefono"
             v-model="phoneNum"
         />
          <GenericInput 
@@ -21,7 +21,12 @@
             textPlaceholder="Inserte@correo"
             v-model="email"
         />
-        <GenericButton @click="submitForm"/>
+        <NuxtLink to="/" class="pagePrincipal">
+            <GenericButton 
+                @click="submitForm" 
+                textButton="Enviar"
+            />
+        </NuxtLink>
     </div>
 </template>
 
