@@ -1,59 +1,57 @@
 <template>
-    <div class="dark:bg-gray-900 h-screen flex flex-col justify-center items-center gap-3">
-        <GenericInput 
+    <div class="bg-gray-800 h-screen flex justify-center items-center">
+      <div class="flex flex-col gap-3 max-w-[400px] w-full">
+        <GenericInput
             textLabel="Nombre"
             textPlaceholder="Inserte nombre"
             v-model="name"
         />
-        <GenericInput 
-            textLabel="Apellido"
-            textPlaceholder="Inserte apellido"
+        <GenericInput
+            textLabel="Apellido *"
+            textPlaceholder="Inserte apellido (opcional)"
             v-model="surname"
-        /> 
-        <GenericInput 
+        />
+        <GenericInput
             textLabel="Telefono"
             typeInput="number"
             textPlaceholder="Inserte Num de telefono"
-            v-model="phoneNum"
+            v-model="phone"
         />
-         <GenericInput 
-            textLabel="Correo"
-            textPlaceholder="Inserte@correo"
-            v-model="email"
+        <GenericInput
+            textLabel="Correo *"
+            textPlaceholder="Inserte@correo (opcional)"
+            v-model="mail"
         />
         <NuxtLink to="/" class="pagePrincipal">
-            <GenericButton 
-                @click="submitForm" 
-                textButton="Enviar"
-            />
+          <GenericButton
+              @click="submitForm"
+              textButton="Guardar"
+          />
         </NuxtLink>
+      </div>
     </div>
 </template>
 
 <script>
-    export default{
+    export default {
         name: 'addContact',
         data:() => ({
-            text:"Prueba",
-            contacts: [],
             name: "",
             surname: "",
-            phoneNum: "",
-            email:"",
+            phone: "",
+            mail:"",
         }),
         methods:{
             submitForm(){
                 let id = Math.floor(Math.random() * 1000000000000);
-                this.contacts.push({
+                let contact = {
                     name:this.name,
                     surname:this.surname,
-                    phoneNum:this.phoneNum,
-                    email:this.email,   
+                    phone:this.phone,
+                    mail:this.mail,
                     id: id
-                })
-                console.log(this.id);
-                console.log(this.contacts);
-            },
+                }
+            }
         }
     }
 </script>

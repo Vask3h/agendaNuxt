@@ -8,7 +8,7 @@
         </NuxtLink>
       </div>
       <div>
-        <div class="bg-gray-700 text-gray-400 text-xs font-bold p-4 grid grid-cols-[100px_1fr_1fr_1fr_100px] rounded-[10px_10px_0_0]">
+        <div class="w-full bg-gray-700 text-gray-400 text-xs font-bold p-4 grid grid-cols-[100px_1fr_1fr_1fr_100px] rounded-[10px_10px_0_0]">
           <div class="w-[100px]">
             FOTO
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center ">
+  <div class="flex justify-center gap-1 ">
     <button class="max-w-10 p-2 hover:bg-gray-700 rounded transition duration-100" >
       <NuxtImg src="/edit.svg"/>
     </button>
