@@ -38,7 +38,7 @@
 </template>
 
 <script>
-    export default {
+    /*export default {
         name: 'addContact',
         data:() => ({
             name: "",
@@ -58,5 +58,5 @@
                 }
             }
         }
-    }
+    }*/
 </script>
