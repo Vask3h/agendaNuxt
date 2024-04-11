@@ -53,5 +53,5 @@
         ...mapActions(useAgendaStore, ['createContact']),
       },
 
-    }*/
+    }
 </script>
