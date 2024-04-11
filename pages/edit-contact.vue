@@ -45,29 +45,5 @@
 </template>
 
 <script>
-export default {
-  name: 'addContact',
-  data: () => ({
-    text: "Prueba",
-    contacts: [],
-    name: "",
-    surname: "",
-    phoneNum: "",
-    email: "",
-  }),
-  methods: {
-    submitForm() {
-      let id = Math.floor(Math.random() * 1000000000000);
-      this.contacts.push({
-        name: this.name,
-        surname: this.surname,
-        phoneNum: this.phoneNum,
-        email: this.email,
-        id: id
-      })
-      console.log(this.id);
-      console.log(this.contacts);
-    },
-  }
-}
+
 </script>

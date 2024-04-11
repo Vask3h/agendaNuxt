@@ -8,7 +8,7 @@ export const useAgendaStore = defineStore( 'agenda', {
                 surname: 'Broncano',
                 mail: 'prueba@prueba.com',
                 phone: '8245234234',
-                id: 982452867456284574957
+                id: 982452867456284
             }
         ],
     }),
