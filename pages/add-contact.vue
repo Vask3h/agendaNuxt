@@ -1,38 +1,38 @@
 <template>
   <div class="dark:bg-gray-900 h-screen flex justify-center items-center">
     <div class="flex flex-col max-w-[400px] w-full gap-3 ">
-    <GenericInput
-        textLabel="Nombre"
-        textPlaceholder="Inserte nombre"
-        v-model="name"
-    />
-    <GenericInput
-        textLabel="Apellido *"
-        textPlaceholder="Inserte apellido(opcional)"
-        v-model="surname"
-    />
-    <GenericInput
-        textLabel="Telefono"
-        typeInput="number"
-        textPlaceholder="Inserte Num de telefono"
-        v-model="phoneNum"
-    />
-    <GenericInput
-        textLabel="Correo *"
-        textPlaceholder="Inserte@correo(opcional)"
-        v-model="email"
-    />
-    <div class="flex flex-row justify-between gap-6">
-      <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit flex gap-3   px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-        <NuxtImg src="back.svg" class="w-4" @click="submitForm"/>
-        Atras
-      </NuxtLink>
+      <GenericInput
+          textLabel="Nombre"
+          textPlaceholder="Inserte nombre"
+          v-model="name"
+      />
+      <GenericInput
+          textLabel="Apellido *"
+          textPlaceholder="Inserte apellido(opcional)"
+          v-model="surname"
+      />
+      <GenericInput
+          textLabel="Telefono"
+          typeInput="number"
+          textPlaceholder="Inserte Num de telefono"
+          v-model="phoneNum"
+      />
+      <GenericInput
+          textLabel="Correo *"
+          textPlaceholder="Inserte@correo(opcional)"
+          v-model="email"
+      />
+      <div class="flex flex-row justify-between gap-6">
+        <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit flex gap-3   px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+          <NuxtImg src="back.svg" class="w-4" @click="submitForm"/>
+          Atras
+        </NuxtLink>
 
-      <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit flex gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-        <NuxtImg src="savePhoto.svg" class="w-4" @click="submitForm"/>
-        Guardar
-      </NuxtLink>
-    </div>
+        <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit flex gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+          <NuxtImg src="savePhoto.svg" class="w-4" @click="submitForm"/>
+          Guardar
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
