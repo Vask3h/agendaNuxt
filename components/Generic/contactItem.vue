@@ -32,7 +32,7 @@ export default {
     phone: {
       type: String,
       required: true,
-    }
+    },
   },
   computed: {
     ...mapState(useAgendaStore, ['text'])

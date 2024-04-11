@@ -28,16 +28,28 @@
         </div>
         <div class="overflow-y-scroll scrollbar max-h-[500px] min-h-[500px] bg-gray-700 rounded-[0_0_10px_10px]">
           <GenericContactItem
-              name="David"
-              surname="Broncano"
-              phone="644 03 30 22"
-              mail="davidbroncano@gmail.com"
+              v-for="contact in contacts"
+              :key="contact.id"
+              :name="contact.name"
+              :surname="contact.surname"
+              :phone="contact.phone"
+              :mail="contact.mail"
           />
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+  import { mapState } from "pinia";
+  import {useAgendaStore} from "~/stores/index.js";
+  export default {
+    computed: {
+      ...mapState(useAgendaStore, ['contacts'])
+    }
+  }
+</script>
 
 <style scoped lang="scss">
 .scrollbar {
