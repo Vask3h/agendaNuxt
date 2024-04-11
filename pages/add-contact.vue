@@ -33,6 +33,9 @@
 </template>
 
 <script>
+    import {mapActions} from "pinia";
+    import {useAgendaStore} from "~/stores/index.js";
+
     export default {
         name: 'addContact',
         data:() => ({
@@ -41,17 +44,9 @@
             phone: "",
             mail:"",
         }),
-        methods:{
-            submitForm(){
-                let id = Math.floor(Math.random() * 1000000000000);
-                let contact = {
-                    name:this.name,
-                    surname:this.surname,
-                    phone:this.phone,
-                    mail:this.mail,
-                    id: id
-                }
-            }
-        }
+      methods: {
+        ...mapActions(useAgendaStore, ['createContact']),
+      },
+
     }
 </script>
