@@ -22,12 +22,17 @@
             textPlaceholder="Inserte@correo (opcional)"
             v-model="mail"
         />
-        <NuxtLink to="/" class="pagePrincipal">
-          <GenericButton
-              @click="submitForm"
-              textButton="Guardar"
-          />
-        </NuxtLink>
+        <div class="flex flex-row justify-between gap-6">
+          <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+            <NuxtImg src="back.svg" class="w-4" @click="submitForm"/>
+            Atras
+          </NuxtLink>
+
+          <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+            <NuxtImg src="savePhoto.svg" class="w-4" @click="submitForm"/>
+            Guardar
+          </NuxtLink>
+        </div>
       </div>
     </div>
 </template>
