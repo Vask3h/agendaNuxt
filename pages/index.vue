@@ -2,8 +2,7 @@
   <div class="flex h-screen w-screen items-center justify-center overflow-hidden bg-gray-800">
     <div class="pt-10 max-w-[800px] w-full shadow-lg flex flex-col gap-5">
       <div class="w-full flex justify-end">
-        <NuxtLink to="add-contact"
-                  class="flex items-center justify-center h-10 w-fit flex gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+        <NuxtLink to="add-contact" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
           <NuxtImg src="plususer.svg" class="w-4"/>
           Agregar contacto
         </NuxtLink>
