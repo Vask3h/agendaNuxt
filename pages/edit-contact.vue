@@ -1,6 +1,7 @@
 <template>
-  <div class="dark:bg-gray-900 h-screen flex justify-center items-center">
-    <div class="flex flex-col max-w-[400px] w-full gap-3 ">
+  <div class="dark:bg-gray-900 h-screen grid justify-center items-center">
+    <div class="grid grid-cols max-w-[400px] w-full gap-3 ">
+      <GenericNameIcon/>
     <GenericInput
         textLabel="Nombre"
         textPlaceholder="Inserte nombre"
@@ -11,6 +12,8 @@
         textPlaceholder="Inserte apellido(opcional)"
         v-model="surname"
     />
+    </div>
+    <div class="grid grid-cols-1">
     <GenericInput
         textLabel="Telefono"
         typeInput="number"
@@ -22,6 +25,7 @@
         textPlaceholder="Inserte@correo(opcional)"
         v-model="email"
     />
+    </div>
     <div class="flex flex-row justify-between gap-6">
       <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit flex gap-3   px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
         <NuxtImg src="back.svg" class="w-4" @click="submitForm"/>
@@ -34,7 +38,6 @@
       </NuxtLink>
     </div>
     </div>
-  </div>
 </template>
 
 <script>
