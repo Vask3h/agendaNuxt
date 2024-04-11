@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-gray-900 p-4 grid grid-cols-[100px_1fr_1fr_1fr_100px] text-white items-center overflow-hidden text-ellipsis border-t-2 border-gray-700 ">
+  <div class="bg-gray-900 hover:bg-gray-800 py-2 px-4 grid grid-cols-[100px_190px_190px_190px_100px] text-white items-center border-t border-gray-700 ">
     <GenericNameIcon/>
-    <p> {{ name}} </p>
-    <p> {{ phone }}</p>
-    <p> {{ mail}}</p>
+    <p class="overflow-hidden text-ellipsis text-nowrap pr-2"> {{ name}} </p>
+    <p class="overflow-hidden text-ellipsis text-nowrap pr-2"> {{ phone }}</p>
+    <p class="overflow-hidden text-ellipsis text-nowrap pr-2"> {{ mail}}</p>
     <GenericActions/>
   </div>
 </template>
