@@ -24,11 +24,11 @@
         />
         <div class="flex flex-row justify-between gap-6">
           <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-            <NuxtImg src="back.svg" class="w-4"/>
+            <NuxtImg src="back.svg" class="w-4" @click="'funciona'"/>
             Atras
           </NuxtLink>
 
-          <NuxtLink to="/" @click="createContact(name, surname, phone, mail)" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+          <NuxtLink to="" @click="createContact(name, surname, phone, mail)" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
             <NuxtImg src="savePhoto.svg" class="w-4"/>
             Guardar
           </NuxtLink>
@@ -38,8 +38,8 @@
 </template>
 
 <script>
-    import {mapActions} from "pinia";
-    import {useAgendaStore} from "~/stores/agenda.js";
+import {mapActions} from "pinia";
+import {useAgendaStore} from "~/stores/index.js";
 
     export default {
         name: 'addContact',
@@ -50,7 +50,7 @@
             mail:"",
         }),
       methods: {
-        ...mapActions(useAgendaStore,['createContact']),
+        ...mapActions(useAgendaStore, ['createContact']),
       },
 
     }
