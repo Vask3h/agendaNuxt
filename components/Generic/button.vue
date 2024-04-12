@@ -1,5 +1,6 @@
 <template>
-  <button class="text-white bg-gray-700 placeholder-gray border border-solid outline-none focus-within:border-blue-500 border-gray-600 rounded-lg p-2 h-20 w-20 items-center">
+  <button class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg" :class="isDisable">
+    <NuxtImg :src="iconButton" class="w-4"/>
     {{ textButton }}
   </button>
 </template>
@@ -7,10 +8,23 @@
 <script>
 export default {
   name: 'GenericButton',
+  computed: {
+    isDisable() {
+      return this.disable ? '!cursor-not-allowed !opacity-50 hover:!bg-gray-700' : ''
+    }
+  },
   props: {
     textButton: {
       type: String,
       default: "Button"
+    },
+    iconButton: {
+      type: String,
+      default: "",
+    },
+    disable : {
+      type: Boolean,
+      default: false,
     }
   }
 }
