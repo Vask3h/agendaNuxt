@@ -8,11 +8,21 @@ export const useAgendaStore = defineStore( 'agenda', {
                 surname: 'Broncano',
                 mail: 'prueba@prueba.com',
                 phone: '8245234234',
-                id: 982452867456
+                id: 0
             }
         ],
+        selectContact: {}
     }),
     actions: {
+        editContact(id){
+            let position = this.contacts.findIndex((x)=> x.id === id)
+            this.selectContact = this.contacts[position]
+
+        },
+        deleteContact(id){
+            let position = this.contacts.findIndex((x)=> x.id === id)
+            this.contacts.splice(position,1)
+        },
         createContact(name, surname, phone, mail) {
             if (name != "" && phone != ""){
                 // Comparar si name y phone esta vacio, si esta vacio no se debe de agregar el contacto.
