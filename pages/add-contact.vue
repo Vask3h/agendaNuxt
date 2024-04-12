@@ -28,7 +28,7 @@
             Atras
           </NuxtLink>
 
-          <NuxtLink to="" @click="createContact(name, surname, phone, mail)" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+          <NuxtLink to="/" @click="createContact(name, surname, phone, mail)" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
             <NuxtImg src="savePhoto.svg" class="w-4"/>
             Guardar
           </NuxtLink>
