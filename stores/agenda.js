@@ -25,9 +25,6 @@ export const useAgendaStore = defineStore( 'agenda', {
         },
         createContact(name, surname, phone, mail) {
             if (name != "" && phone != ""){
-                // Comparar si name y phone esta vacio, si esta vacio no se debe de agregar el contacto.
-                // Aparte debes de comprobar EN EL BOTON que no se pueda hacer click, puedes comprobarlo de ambas maneras
-                // Es decir, puedes usar una computed que retorne un booleano para saber cuando se puede hacer click y cuando no
                 let id = Math.floor(Math.random() * 1000000000000);
                 let contact = {
                     name: name,
