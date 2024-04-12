@@ -4,7 +4,9 @@
     <p class="overflow-hidden text-ellipsis text-nowrap pr-2"> {{ name }} </p>
     <p class="overflow-hidden text-ellipsis text-nowrap pr-2"> {{ phone }}</p>
     <p class="overflow-hidden text-ellipsis text-nowrap pr-2"> {{ mail}}</p>
-    <GenericActions/>
+    <GenericActions
+    :id="id"
+    />
   </div>
 </template>
 
@@ -15,6 +17,10 @@ import { mapState, mapActions } from "pinia";
 export default {
   name:"contactItem",
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     name: {
       type: String,
       required: true,

@@ -34,6 +34,7 @@
               :surname="contact.surname"
               :phone="contact.phone"
               :mail="contact.mail"
+              :id="contact.id"
           />
         </div>
       </div>
@@ -48,6 +49,7 @@
     computed: {
       ...mapState(useAgendaStore, ['contacts'])
     }
+
   }
 </script>
 

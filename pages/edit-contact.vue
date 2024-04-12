@@ -7,12 +7,13 @@
           <GenericInput
               textLabel="Nombre"
               textPlaceholder="Inserte nombre"
-              v-model="name"
+              v-model="selectContact.name"
+
           />
           <GenericInput
               textLabel="Apellido *"
               textPlaceholder="Inserte apellido(opcional)"
-              v-model="surname"
+              v-model="selectContact.surname"
           />
         </div>
       </div>
@@ -21,22 +22,23 @@
             textLabel="Telefono"
             typeInput="number"
             textPlaceholder="Inserte Num de telefono"
-            v-model="phoneNum"
+            v-model="selectContact.phone"
         />
         <GenericInput
             textLabel="Correo *"
             textPlaceholder="Inserte@correo(opcional)"
-            v-model="email"
+            v-model="selectContact.mail"
         />
       </div>
       <div class="flex flex-row justify-between gap-6 pt-4">
-        <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit gap-3   px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-          <NuxtImg src="back.svg" class="w-4" @click="submitForm"/>
+        <NuxtLink to="/"
+                  class="flex items-center justify-center h-10 w-fit gap-3   px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
+          <NuxtImg src="back.svg" class="w-4"/>
           Atras
         </NuxtLink>
 
         <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-          <NuxtImg src="savePhoto.svg" class="w-4" @click="submitForm"/>
+          <NuxtImg src="savePhoto.svg" class="w-4"/>
           Guardar
         </NuxtLink>
       </div>
@@ -45,5 +47,14 @@
 </template>
 
 <script>
+import {mapState} from "pinia";
+import {useAgendaStore} from "~/stores/index.js";
+
+export default {
+  name: 'editContact',
+  computed: {
+    ...mapState(useAgendaStore, ['contacts','selectContact'])
+  },
+}
 
 </script>
