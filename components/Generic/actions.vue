@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import {mapActions, mapState} from "pinia";
+import {mapActions} from "pinia";
 import {useAgendaStore} from "~/stores/agenda.js";
 import editContact from "~/pages/edit-contact.vue";
 
