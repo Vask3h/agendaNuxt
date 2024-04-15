@@ -2,7 +2,9 @@
   <div class="bg-gray-800 h-screen grid justify-center items-center">
     <div class="flex flex-col gap-4">
       <div class="flex max-w-[700px] w-full gap-6 justify-center items-center">
-        <GenericNameIcon class="min-h-20 min-w-20 text-4xl"/>
+        <GenericNameIcon class="min-h-20 min-w-20 text-4xl"
+                :name="selectContact.name"
+        />
         <div class="flex flex-col gap-4">
           <GenericInput
               textLabel="Nombre"
@@ -52,12 +54,21 @@
 
 <script>
 import {mapState} from "pinia";
-import {useAgendaStore} from "~/stores/index.js";
+import {useAgendaStore} from "~/stores/agenda.js";
 
 export default {
   name: 'editContact',
+  prop:{
+    name:{
+      type: String,
+      required: true,
+    }
+  },
   computed: {
-    ...mapState(useAgendaStore, ['contacts','selectContact'])
+    ...mapState(useAgendaStore, ['contacts','selectContact']),
+    firstLetter(){
+      return this.name.charAt(0).toUpperCase();
+    }
   },
 }
 
