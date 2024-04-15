@@ -14,6 +14,12 @@ export const useAgendaStore = defineStore( 'agenda', {
         selectContact: {}
     }),
     actions: {
+        profileIcon(){
+          let letter = this.contacts.name
+          let resolute = "";
+            for (let i = 0; i < letter.length; resolute += letter[i][0], i++);
+            console.log(resolute);
+        },
         editContact(id){
             let position = this.contacts.findIndex((x)=> x.id === id)
             this.selectContact = this.contacts[position]
