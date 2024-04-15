@@ -5,7 +5,18 @@
 </template>
 
 <script>
-    export default{
-        name:"nameIcon",
-    }
+import {mapState} from "pinia";
+import {useAgendaStore} from "~/stores/index.js";
+
+export default {
+  name: 'nameIcon',
+  props:{
+
+  },
+  computed: {
+    ...mapState(useAgendaStore, ['contacts','selectContact'])
+  },
+}
+
+
 </script>
