@@ -32,7 +32,7 @@
 
           <NuxtLink v-if="isClickable" to="/" class="w-fit h-fit">
             <GenericButton
-                @click="createContact(name, surname, phone, mail)"
+                @click="() => { createContact(name, surname, phone, mail); exportContact(); }"
                 text-button="Guardar"
                 icon-button="savePhoto.svg"
             />
@@ -70,6 +70,7 @@ import {useAgendaStore} from "~/stores/index.js";
       },
       methods: {
         ...mapActions(useAgendaStore, ['createContact']),
+        ...mapActions(useAgendaStore, ['exportContact']),
       },
 
     }

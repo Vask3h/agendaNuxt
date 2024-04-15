@@ -45,7 +45,7 @@
 </template>
 
 <script>
-  import { mapState } from "pinia";
+import {mapActions, mapState} from "pinia";
   import {useAgendaStore} from "~/stores/agenda.js";
   export default {
     computed: {

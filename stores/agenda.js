@@ -14,6 +14,12 @@ export const useAgendaStore = defineStore( 'agenda', {
         selectContact: {}
     }),
     actions: {
+        exportContact(contactos){
+            contactos = this.contacts
+            localStorage.setItem("contactos", JSON.stringify(this.contacts))
+            console.log(this.exportContact)
+        },
+
         editContact(id){
             let position = this.contacts.findIndex((x)=> x.id === id)
             this.selectContact = this.contacts[position]
