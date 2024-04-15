@@ -14,7 +14,6 @@
 <script>
 import {mapActions} from "pinia";
 import {useAgendaStore} from "~/stores/agenda.js";
-import editContact from "~/pages/edit-contact.vue";
 
 export default {
   name: "actions",

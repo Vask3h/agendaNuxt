@@ -47,6 +47,6 @@ export default {
     ...mapActions(useAgendaStore,['createContact'])
   },
 
-  }
+}
 
 </script>
