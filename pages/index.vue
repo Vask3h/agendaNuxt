@@ -45,15 +45,12 @@
 </template>
 
 <script>
-import {mapActions, mapState} from "pinia";
+import {mapState} from "pinia";
   import {useAgendaStore} from "~/stores/agenda.js";
   export default {
     computed: {
       ...mapState(useAgendaStore, ['contacts'])
     },
-  beforeCreate: function(){
-    localStorage.getItem("contactos")
-  }
   }
 </script>
 

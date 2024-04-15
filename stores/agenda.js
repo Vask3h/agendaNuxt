@@ -1,18 +1,12 @@
 import {defineStore} from 'pinia'
 
 export const useAgendaStore = defineStore( 'agenda', {
-    state:() => ({
-        contacts:[
-            {
-                name: 'PRUEBA PINIA',
-                surname: 'Broncano',
-                mail: 'prueba@prueba.com',
-                phone: '8245234234',
-                id: 0
-            }
-        ],
-        selectContact: {}
-    }),
+    state:() => {
+        return ({
+            contacts: JSON.parse(localStorage.getItem("contactos")),
+            selectContact: {}
+        });
+    },
     actions: {
         exportContact(contactos){
             contactos = this.contacts
