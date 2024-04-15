@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-900 h-screen grid justify-center items-center">
+  <div class="bg-gray-800 h-screen grid justify-center items-center">
     <div class="flex flex-col gap-4">
       <div class="flex max-w-[700px] w-full gap-6 justify-center items-center">
-        <GenericNameIcon class="min-h-20 min-w-20 text-4xl "/>
+        <GenericNameIcon class="min-h-20 min-w-20 text-4xl"/>
         <div class="flex flex-col gap-4">
           <GenericInput
               textLabel="Nombre"
@@ -30,16 +30,20 @@
             v-model="selectContact.mail"
         />
       </div>
-      <div class="flex flex-row justify-between gap-6 pt-4">
-        <NuxtLink to="/"
-                  class="flex items-center justify-center h-10 w-fit gap-3   px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-          <NuxtImg src="back.svg" class="w-4"/>
-          Atras
+      <div class="flex flex-row justify-between gap-6">
+        <NuxtLink to="/" class="w-fit h-fit">
+          <GenericButton
+              text-button="Atras"
+              icon-button="back.svg"
+          />
         </NuxtLink>
 
-        <NuxtLink to="/" class="flex items-center justify-center h-10 w-fit gap-3 px-3 rounded bg-gray-700 hover:bg-blue-500 text-white shadow-lg">
-          <NuxtImg src="savePhoto.svg" class="w-4"/>
-          Guardar
+        <NuxtLink to="/" class="w-fit h-fit">
+          <GenericButton
+              @click="createContact(name, surname, phone, mail)"
+              text-button="Guardar"
+              icon-button="savePhoto.svg"
+          />
         </NuxtLink>
       </div>
     </div>
