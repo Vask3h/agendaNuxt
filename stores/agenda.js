@@ -3,6 +3,7 @@ import {defineStore} from 'pinia'
 export const useAgendaStore = defineStore( 'agenda', {
     state:() => {
         return ({
+
             contacts: JSON.parse(localStorage.getItem("contactos")),
             selectContact: {}
         });
@@ -22,6 +23,9 @@ export const useAgendaStore = defineStore( 'agenda', {
         deleteContact(id){
             let position = this.contacts.findIndex((x)=> x.id === id)
             this.contacts.splice(position,1)
+            localStorage.setItem("contactos", JSON.stringify(this.contacts))
+
+
         },
         createContact(name, surname, phone, mail) {
             if (name != "" && phone != ""){
