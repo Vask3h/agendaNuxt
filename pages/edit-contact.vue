@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-gray-800 h-screen grid justify-center items-center">
-    <div class="flex flex-col gap-4">
-      <div class="flex max-w-[700px] w-full gap-6 justify-center items-center">
+  <div class="bg-gray-800  h-screen grid justify-center items-center">
+    <div class="flex min-w-[300px] flex-col gap-4">
+      <div class="flex  max-w-[900px] w-full gap-10 justify-center items-center">
         <GenericNameIcon class="min-h-20 min-w-20 text-4xl"
                 :name="selectContact.name"
         />
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 min-w-[300px]">
           <GenericInput
               textLabel="Nombre"
               textPlaceholder="Inserte nombre"
