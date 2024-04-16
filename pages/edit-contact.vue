@@ -42,7 +42,7 @@
 
         <NuxtLink to="/" class="w-fit h-fit">
           <GenericButton
-              @click="createContact(name, surname, phone, mail)"
+              @click="exportContact()"
               text-button="Guardar"
               icon-button="savePhoto.svg"
           />
@@ -53,11 +53,17 @@
 </template>
 
 <script>
-import {mapState} from "pinia";
+import {mapActions, mapState} from "pinia";
 import {useAgendaStore} from "~/stores/agenda.js";
 
 export default {
   name: 'editContact',
+  data:() => ({
+    name: "",
+    surname: "",
+    phone: "",
+    mail:"",
+  }),
   prop:{
     name:{
       type: String,
@@ -66,6 +72,7 @@ export default {
   },
   computed: {
     ...mapState(useAgendaStore, ['contacts','selectContact']),
+    ...mapActions(useAgendaStore, ['exportContact']),
     firstLetter(){
       return this.name.charAt(0).toUpperCase();
     }
