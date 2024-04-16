@@ -25,7 +25,6 @@ export const useAgendaStore = defineStore( 'agenda', {
         editContact(id){
             let position = this.contacts.findIndex((x)=> x.id === id)
             this.selectContact = this.contacts[position]
-
         },
         deleteContact(id){
             let position = this.contacts.findIndex((x)=> x.id === id)

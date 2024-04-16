@@ -42,8 +42,8 @@
 
         <NuxtLink to="/" class="w-fit h-fit">
           <GenericButton
-              @click="createContact(name, surname, phone, mail)"
-              text-button="Guardar"
+              @click="exportContact()"
+              text-button="Guardaa"
               icon-button="savePhoto.svg"
           />
         </NuxtLink>
